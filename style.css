@@ -58,3 +58,55 @@ button {
     cursor: pointer;
     border-radius: 40px;
 }
+ul li {
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 40px; /* Adjust the left padding to make space for the icon */
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+  }
+  
+  ul li::before {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 50%; /* Center the icon vertically */
+    left: 10px; /* Set space from the left edge */
+    transform: translateY(-50%); /* Adjust for proper vertical centering */
+    border-radius: 50%;
+    background-image: url(image/uncheck.png);
+    background-size: cover;
+    background-position: center; /* Center the image */
+  }
+  
+  /* Optionally, add space between tasks */
+  ul li + li {
+    margin-top: 20px;
+  }
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+
+}  
+ul li.checked::before{
+    background-image: url(image/checked\ img.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+
+}
+ul li span:hover{
+    background: #edeef0;
+     
+}
